@@ -9,7 +9,7 @@ class Profile(models.Model):
     cities = [
     ('SOFIA', 'Sofia'),
     ]
-    year_in_school = models.CharField(
+    main_city = models.CharField(
         max_length=10,
         choices=cities,
         default='SOFIA',
