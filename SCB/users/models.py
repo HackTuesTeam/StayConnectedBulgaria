@@ -7,6 +7,14 @@ from PIL import Image
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    MY_CHOICES = [
+        ('a', 'Hola'),
+        ('b', 'Hello'),
+        ('c', 'Bonjour'),
+        ('d', 'Boas'),
+    ]
+
+    my_field = models.CharField(max_length=1, choices=MY_CHOICES)
 
     def __str__(self):
         return f'{self.user.username} Profile'
