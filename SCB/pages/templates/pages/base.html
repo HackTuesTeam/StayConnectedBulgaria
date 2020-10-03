@@ -8,15 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Base</h1>
     <main role="main">
       {% block content %}{% endblock %}
     </main>
+    <p>Stay Connected Bulgaria</p>
+
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#"><i class="icon icon-home"></i>Home</a></li>
+            <li><a href="#"><i class="icon icon-list"></i>Cities</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Sofia</a></li>
+                        <li><a href="#">Varna</a></li>
+                        <li><a href="#">Burgas</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="icon icon-user"></i>My profile</a></li>
+            <li><a href="#"><i class="icon icon-group"></i>My friends</a></li>
+            <li><a href="#"><i class="icon icon-cog"></i>Settings</a></li>
+            <li><a href="#"><i class="icon icon-ellipsis-horizontal"></i>About</a></li>
+        </ul>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
