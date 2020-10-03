@@ -8,6 +8,10 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     cities = [
     ('SOFIA', 'Sofia'),
+    ('BURGAS', 'Burgas'),
+    ('PLOVDIV', 'Plovdiv'),
+    ('VARNA', 'Varna'),
+    ('RUSE', 'Ruse'),
     ]
     main_city = models.CharField(
         max_length=10,
@@ -15,12 +19,12 @@ class Profile(models.Model):
         default='SOFIA',
     )
 
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.ImageField(default='profile_pics/default.png', upload_to='profile_pics')
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
         img = Image.open(self.image.path)
 

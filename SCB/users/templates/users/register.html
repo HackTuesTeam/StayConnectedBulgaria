@@ -1,0 +1,32 @@
+{% extends "pages/base.html" %}
+{% block content %}
+<div>
+
+  <form method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <h1>Регистрация</h1>
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+      <p>Моля попълнете формата, за да създадете регистрация.</p>
+      <hr>
+      {{ form.username.label }}
+      {{ form.username }}
+      {{ form.email.label }}
+      {{ form.email }}
+      {{ form.password1.label }}
+      {{ form.password1 }}
+      {{ form.password2.label }}
+      {{ form.password2 }}
+      <hr>
+      <button type="submit" class="reglogbtn">Регистрирай</button>
+    </div>
+
+    <div class="container signin">
+      <a  href="{% url 'login' %}">Вече имате акаунт? Вход</a>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}
