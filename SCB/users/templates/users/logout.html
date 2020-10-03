@@ -1,0 +1,16 @@
+{% extends "pages/base.html" %}
+{% block content %}
+<div class="container">
+  <h1>Излязохте от профила си</h1>
+  <div class="container signin">
+    <a  href="{% url 'login' %}">Вече имате акаунт? Вход</a>
+  </div>
+  <br>
+  <div class="container signin">
+    <a  href="{% url 'register' %}">Нямате акаунт?</a>
+  </div>
+
+
+</div>
+
+{% endblock content %}

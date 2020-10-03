@@ -6,9 +6,7 @@
     {% csrf_token %}
     <div class="container">
       <h1>Регистрация</h1>
-      {% for message in messages %}
-        {{ message }}
-      {% endfor %}
+
       <p>Моля попълнете формата, за да създадете регистрация.</p>
       <hr>
       {{ form.username.label }}

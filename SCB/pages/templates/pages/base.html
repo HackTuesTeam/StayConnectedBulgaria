@@ -18,10 +18,20 @@
     <h1>Base</h1>
     <h1>User</h1>
     <h1>Cities</h1>
+    {% if user.is_authenticated %}
+      <a href="#"> profile</a>
+      <a href="{% url 'logout'%}"> logout</a>
+    {% else %}
+      <a href="{% url 'login'%}"> Login</a>
+      <a href="{% url 'register'%}"> register</a>
+    {% endif %}
   </header>
 
 
     <main role="main">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
       {% block content %}{% endblock %}
     </main>
 

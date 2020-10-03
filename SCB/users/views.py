@@ -1,13 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 # Create your views here.
-
-def user_list(request):
-        context = {
-        }
-        return render(request, 'users/user_list.html', context)
-
 
 def login_view(request):
         context = {
