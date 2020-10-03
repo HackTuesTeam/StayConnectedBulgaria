@@ -1,10 +1,10 @@
-~* {
+ * {
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: white;
+    background-color: black;
     background-size:  cover;
     background-position: center;
     box-sizing: border-box;
@@ -44,10 +44,6 @@ p {
     position: relative;
 }
 
-.icon {
-    margin: 8px;
-}
-
 .menu-bar ul li:hover{
     background-color: #0b5ee3;
 }
@@ -77,9 +73,9 @@ p {
 }
 
 .menu-bar ul li:hover .sub-menu-1 ul li{
-    width: 91%;
+    width: 80%;
     padding: 10px;
-    margin-left: -6px;
+    margin-left: -8px;
     border-radius: 4px;
     text-align: center;
 }
