@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
+from .models import Profile
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import DetailView
+
+
 # Create your views here.
 
 def login_view(request):
@@ -28,3 +33,9 @@ def register(request):
         print("you are registering \n\n")
     context = {'form':form}
     return render(request, 'users/register.html', context)
+
+def user_detail(request):
+    context = {
+        'user': request.user,
+    }
+    return render(request, 'users/user_detail.html', context)

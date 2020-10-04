@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="../../../pages/static/blog/main.css">
-</head>
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
 
-<body>
-	<div class="menu-bar">
-        <ul>
-            <li><a href="#"><i class="icon icon-home"></i>Home</a></li>
-            <li><a href="#"><i class="icon icon-list"></i>Cities</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="#">Sofia</a></li>
-                        <li><a href="#">Varna</a></li>
-                        <li><a href="#">Burgas</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#"><i class="icon icon-user"></i>My profile</a></li>
-            <li><a href="#"><i class="icon icon-group"></i>My friends</a></li>
-            <li><a href="#"><i class="icon icon-cog"></i>Settings</a></li>
-            <li><a href="#"><i class="icon icon-ellipsis-horizontal"></i>About</a></li>
-        </ul>
-    </div>
-
-	<div class="imgandins">
+	<div class="imgandins container">
 	<div class="imgspc">
 
 		<script>
@@ -36,27 +13,16 @@
 		};
 		</script>
 
-		<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-		<p><label for="file" style="cursor: pointer;">Качи снимка</label></p>
-		<p><img id="output" width="200" /></p>
-
 	</div>
 	<div class="insbar">
 		<hr>
-		<label for="usrn"><b>Псевдоним</b></label>
-		<input type="username" name="usrn" id="usrn" required>
-
-		<label for="meilch"><b>Мейл</b></label>
-		<input type="emeilb" name="meilch" id="meilch" required>
-
-		<label for="city"><b>Град/Област</b></label>
-		<input type="city" name="city" id="city" required>
-
-		<label for="bio"><b>Биография</b></label>
-		<input type="Bio" name="bio" id="bio" required>
+		<h1>{{ user.username }}</h1>
+		<h1>{{ user.profile.main_city }}</h1>
+		<h2>{{ user.profile.content }}</h2>
 		</hr>
 	</div>
+	<a href="{% url 'article-list' %}" class="posts">Постове</a>
 	</div>
-	<button type="submit" class="posts">Постове</button>
-</body>
-</html>
+
+
+{% endblock content %}
