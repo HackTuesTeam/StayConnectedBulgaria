@@ -11,10 +11,10 @@
           <li><h5 class="author">{{ article.author }}</h5></li>
       </ul>
       <p>{{ srticle.content }}</p>
-     </div>
       {% if article.author == user %}
         <a class="button" href="{% url 'article-update' article.id %}">Update</a>
         <a class="button" href="{% url 'article-delete' article.id %}">Delete</a>
       {% endif %}
+    </div>
 
 {% endblock content %}

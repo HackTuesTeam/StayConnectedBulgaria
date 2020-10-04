@@ -3,9 +3,10 @@
     <h1>Articles list</h1>
 
     {% for article in articles %}
-      <div class="article">
+      <div class="container article">
         <a href="{% url 'article-detail' article.id %}" class="title"><h2>{{ article.title }}</h2></a>
         <h5>kacheno {{ article.date_posted|date:"F d, Y" }}</h5>
+        <h5> {{ article.city }}</h5>
         <p>{{ srticle.content }}</p>
       </div>
     {% endfor %}
