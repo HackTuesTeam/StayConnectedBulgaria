@@ -13,17 +13,19 @@ class ArticleListView(ListView):
     def to_python(self, value):
         print(self.slug,"\n\n\n")
 
+class ArticleDetailView(DetailView):
+    model=Article
+    template_name="articles/article_detail.html"
+    context_object_name="article"
+
+
+
 def article_list_city(request,city):
     context = {
         'articles': Article.objects.filter(city=city.upper())
     }
     return render(request, 'articles/article_list.html', context)
 
-class ArticleDetailView(DetailView):
-    model=Article
-    template_name="articles/detail.html"
-    context_object_name='article'
-    ordering = ['-date_posted']
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     model=Article

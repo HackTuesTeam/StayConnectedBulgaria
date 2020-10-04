@@ -1,0 +1,235 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e6fff2;
+  background-size:  cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    padding: 10px;
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+}
+
+.menu-bar{
+    background: white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #ededed;
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+    width: 100%;
+}
+
+.menu-bar ul li{
+    display: block;
+    background-color: #4287f5;
+    width: 13%;
+    height: 22px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.icon {
+    margin: 8px;
+}
+
+.menu-bar ul li:hover{
+    background-color: #0b5ee3;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 11px;
+    margin-left: -15px;
+    background-color: #0b5ee3;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 91%;
+    padding: 10px;
+    margin-left: -6px;
+    border-radius: 4px;
+    text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #00ff99;
+  margin-bottom: 25px;
+}
+
+
+.reglogbtn {
+  background-color: #00b36b;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.reglogbtn:hover {
+  opacity: 1;
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #99ff99;
+  text-align: center;
+}
+
+.thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+}
+
+.imgspc {
+	height: 400px;
+	width: 300px;
+	margin: 30px 20px 20px 0;
+	background-color: grey;
+}
+.insbars {
+	height: 400px;
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+}
+.imgandins {
+	height: 400px;
+	width: 100%;
+	display: flex;
+}
+
+input[type=text], input[type=username] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=username]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=text], input[type=emeilb] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=emeilb]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=text], input[type=city] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=city]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=text], input[type=Bio] {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=Bio]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.posts {
+  background-color: #00b36b;
+  color: black;
+  padding: 16px 20px;
+  margin: 64px 0;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  opacity: 0.9;
+}
+
+.posts:hover {
+  opacity: 1;
+}
