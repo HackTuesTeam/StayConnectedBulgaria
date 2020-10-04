@@ -13,6 +13,7 @@ class Profile(models.Model):
     ('VARNA', 'Varna'),
     ('RUSE', 'Ruse'),
     ]
+    content = models.TextField(default="just user")
     main_city = models.CharField(
         max_length=10,
         choices=cities,
