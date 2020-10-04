@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% block content %}
     <h1>Articles list</h1>
-    <h2>{{ date_today }}</h2>
+    
     {% for article in articles %}
       <div style="outline-style: dotted">
         <h1>{{ article.author }}</h1>

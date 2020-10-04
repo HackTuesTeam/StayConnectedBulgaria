@@ -7,6 +7,12 @@ from .forms import UserRegisterForm
 def login_view(request):
         context = {
         }
+        return render(request, 'users/user_list.html', context)
+
+
+def login_view(request):
+        context = {
+        }
         return render(request, 'users/login.html', context)
 
 def register(request):

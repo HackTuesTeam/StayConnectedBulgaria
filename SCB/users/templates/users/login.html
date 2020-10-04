@@ -1,4 +1,6 @@
 {% extends "pages/base.html" %}
+
+{% load static %}
 {% block content %}
 <form method="POST">
   {% csrf_token %}
@@ -6,6 +8,7 @@
     <h1>Вход</h1>
     <p>Моля попълнете формата, за да влезете в акаунта си.</p>
     <hr>
+
       {{ form.username.label }}
       {{ form.username }}
       {{ form.password.label }}
@@ -14,7 +17,7 @@
 
     <button type="submit" class="reglogbtn">Вход</button>
   </div>
-  <div class="signin container">
+  <div class="container signin">
     <a  href="{% url 'register' %}">Нямате акаунт?</a>
   </div>
 
