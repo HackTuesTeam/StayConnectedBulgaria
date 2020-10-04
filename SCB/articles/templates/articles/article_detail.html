@@ -2,17 +2,19 @@
 {% block content %}
     <h1>Article detail</h1>
     <h2>{{ date_today }}</h2>
-    <div style="outline-style: dotted">
-      <h1>{{ article.author }}</h1>
-      <h2>{{ article.title }}</h2>
-      <h4>{{ article.city }}</h4>
-      <p>{{ article.content }}</p>
+    <div class="container">
+      <h2 class="title">{{ article.title }}</h2>
+      <p class="text">{{ article.content }}</p>
       <h5>koga se sluchva {{ article.date_of_action|date:"F d, Y" }}</h5>
-      <h5>kacheno {{ article.date_posted|date:"F d, Y" }}</h5>
+      <ul>
+          <li><h5>kacheno {{ article.date_posted|date:"F d, Y" }}</h5></li>
+          <li><h5 class="author">{{ article.author }}</h5></li>
+      </ul>
       <p>{{ srticle.content }}</p>
+     </div>
       {% if article.author == user %}
-        <a href="{% url 'article-update' article.id %}">Update</a>
-        <a href="{% url 'article-delete' article.id %}">Delete</a>
+        <a class="button" href="{% url 'article-update' article.id %}">Update</a>
+        <a class="button" href="{% url 'article-delete' article.id %}">Delete</a>
       {% endif %}
-    </div>
+
 {% endblock content %}

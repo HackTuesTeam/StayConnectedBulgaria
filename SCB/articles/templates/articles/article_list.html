@@ -1,14 +1,10 @@
 {% extends "pages/base.html" %}
 {% block content %}
     <h1>Articles list</h1>
-    
+
     {% for article in articles %}
-      <div style="outline-style: dotted">
-        <h1>{{ article.author }}</h1>
-        <a href="{% url 'article-detail' article.id %}"><h2>{{ article.title }}</h2></a>
-        <h4>{{ article.city }}</h4>
-        <p>{{ article.content }}</p>
-        <h5>koga se sluchva {{ article.date_of_action|date:"F d, Y" }}</h5>
+      <div class="article">
+        <a href="{% url 'article-detail' article.id %}" class="title"><h2>{{ article.title }}</h2></a>
         <h5>kacheno {{ article.date_posted|date:"F d, Y" }}</h5>
         <p>{{ srticle.content }}</p>
       </div>

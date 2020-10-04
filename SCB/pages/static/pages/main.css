@@ -130,3 +130,52 @@ a {
   background-color: #99ff99;
   text-align: center;
 }
+
+
+.title {
+    text-align: center;
+    font-size: 44px;
+}
+
+.title h2{
+    font-size: 44px;
+
+}
+
+.article {
+    display: block;
+    border-bottom: solid gray;
+}
+
+.text {
+    font-size: 18pt;
+
+}
+
+ul{
+    display: block;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+.author {
+    text-align: left;
+    margin-left: 90%;
+}
+
+
+.button {
+    display: block;
+    background-color: #4287f5;
+    color: white;
+    width: 5%;
+    margin: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
