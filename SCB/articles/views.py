@@ -10,6 +10,14 @@ class ArticleListView(ListView):
     template_name="articles/article_list.html"
     context_object_name='articles'
     ordering = ['-date_posted']
+    def to_python(self, value):
+        print(self.slug,"\n\n\n")
+
+def article_list_city(request,city):
+    context = {
+        'articles': Article.objects.filter(city=city.upper())
+    }
+    return render(request, 'articles/article_list.html', context)
 
 class ArticleDetailView(DetailView):
     model=Article
