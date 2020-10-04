@@ -1,0 +1,29 @@
+{% extends "pages/base.html" %}
+{% block navbar %}
+
+  <div class="menu-bar">
+      <ul>
+        <li><a href="{% url 'home' %}"><i class="icon-home"></i> Home</a></li>
+        <li><a href="#"><i class="icon-list"></i> Cities</a>
+              <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#"> Sofia</a></li>
+                    <li><a href="#"> Varna</a></li>
+                    <li><a href="#"> Burgas</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="icon-ellipsis-horizontal"></i> About</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="#"><i class="icon-user"></i> My profile</a></li>
+          <li><a href="{% url 'logout'%}"> logout</a></li>
+          <li><a href="{% url 'article-create'%}"> Article create</a></li>
+        {% else %}
+          <li><a href="{% url 'login'%}"> Login</a></li>
+          <li><a href="{% url 'register'%}"> register</a></li>
+        {% endif %}
+        <li><a href="{% url 'article-list'%}"> articles</a></li>
+      </ul>
+  </div>
+
+{% endblock navbar %}

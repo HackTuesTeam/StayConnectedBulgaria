@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
@@ -24,4 +24,8 @@ def home(request):
         ]
         ,"date_today":"02.10.20",
     }
+<<<<<<< HEAD
+=======
+    return redirect('article-list')
+>>>>>>> a77da727686d4a6b25a679b34e59940ff89634d0
     return render(request, 'pages/news.html', context)

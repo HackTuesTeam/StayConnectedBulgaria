@@ -1,11 +1,18 @@
 {% extends "pages/base.html" %}
+<<<<<<< HEAD
 {% load static %}
 {% block content %}
 <form action="/action_page.php">
+=======
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+>>>>>>> a77da727686d4a6b25a679b34e59940ff89634d0
   <div class="container">
     <h1>Вход</h1>
     <p>Моля попълнете формата, за да влезете в акаунта си.</p>
     <hr>
+<<<<<<< HEAD
 
     <label for="email"><b>И-мейл</b></label>
     <input type="text" placeholder="Въведете и-мейл" name="email" id="email" required>
@@ -13,11 +20,21 @@
     <label for="psw"><b>Парола</b></label>
     <input type="password" placeholder="Въведете парола" name="psw" id="psw" required>
 
+=======
+      {{ form.username.label }}
+      {{ form.username }}
+      {{ form.password.label }}
+      {{ form.password }}
+>>>>>>> a77da727686d4a6b25a679b34e59940ff89634d0
     <hr>
 
     <button type="submit" class="reglogbtn">Вход</button>
   </div>
+<<<<<<< HEAD
   <div class="container signin">
+=======
+  <div class="signin container">
+>>>>>>> a77da727686d4a6b25a679b34e59940ff89634d0
     <a  href="{% url 'register' %}">Нямате акаунт?</a>
   </div>
 
